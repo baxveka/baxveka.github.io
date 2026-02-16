@@ -17,6 +17,21 @@
     }
     h1 { font-size: 3rem; border-bottom: 2px solid #D4A017; }
     p { font-style: italic; color: #be2626; } /* red warning text */
+    button {
+      background: transparent;
+      color: #857c61;
+      border: 2px solid #857c61;
+      padding: 10px 20px;
+      font-family: 'Courier New', Courier, monospace;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #d6be74;
+      color: #29215c;
+    }
   </style>
 </head>
 <body>
@@ -26,3 +41,13 @@
 
 </body>
 </html>
+
+<button onclick="knock()">Knock on the Door</button>
+
+<script>
+  function knock() {
+    const status = document.querySelector('p');
+    status.innerHTML = "A voice from inside: <i>'Who goes there? The opus isn't ready!'</i>";
+    status.style.color = "#ffff00"; // Changes text to yellow
+  }
+</script>
